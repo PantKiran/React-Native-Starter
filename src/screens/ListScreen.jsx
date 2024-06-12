@@ -27,10 +27,11 @@ const ListScreen = () => {
   ];
   return (
     <View>
-      <FlatList
+      <FlatList 
+      keyExtractor={friends=>friends.name}
         data={friends}
         renderItem={({ item }) => {
-         return <Text>{item.name}</Text>;
+         return <Text >{item.name}</Text>;
         }}
       />
     </View>
