@@ -1,14 +1,14 @@
-import React from 'react'
-import { Text, View,StyleSheet } from 'react-native'
+import React from "react";
+import { Text, View, StyleSheet, Image } from "react-native";
 
-const ImageDetails = ({title}) => {
+const ImageDetails = ({ title, image }) => {
   return (
-     <View><Text>{title}</Text></View>
-  )
-}
-const styles = StyleSheet.create({
+    <View>
+      <Image source={image} />
+      <Text>{title}</Text>
+    </View>
+  );
+};
+const styles = StyleSheet.create({});
 
-  
-})
-
-export default ImageDetails
+export default ImageDetails;
