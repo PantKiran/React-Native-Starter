@@ -8,9 +8,9 @@ import mountain from "../../assets/mountain.jpg";
 const ImageScreen = () => {
   return (
     <View>
-      <ImageDetails title={"Forest"} image={forest} />
-      <ImageDetails title={"Beach"} image={beach} />
-      <ImageDetails title={"Mountain"} image={mountain} />
+      <ImageDetails title={"Forest"} image={forest} score={9} />
+      <ImageDetails title={"Beach"} image={beach} score={7}/>
+      <ImageDetails title={"Mountain"} image={mountain} score={8}/>
     </View>
   );
 };
