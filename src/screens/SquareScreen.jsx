@@ -24,6 +24,8 @@ const SquareScreen = () => {
           ? null
           : setBlue(blue + change);
         return;
+        default:
+            return
     }
   };
 
