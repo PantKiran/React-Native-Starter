@@ -6,7 +6,9 @@ const reducer = (state, action) => {
       return { ...state, count: state.count + action.payload };
     }
     case "decrease": {
-      return { ...state, count: state.count + action.payload };
+      return state.count + action.payload < 0
+        ? state
+        : { ...state, count: state.count + action.payload };
     }
     default:
       return state;
