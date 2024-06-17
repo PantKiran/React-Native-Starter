@@ -2,13 +2,13 @@ import React, { useReducer } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 const reducer = (state, action) => {
   switch (action.type) {
-    case "increase": {
+    case "increment": {
       return { ...state, count: state.count + action.payload };
     }
-    case "decrease": {
-      return state.count + action.payload < 0
+    case "decrement": {
+      return state.count - action.payload < 0
         ? state
-        : { ...state, count: state.count + action.payload };
+        : { ...state, count: state.count - action.payload };
     }
     default:
       return state;
@@ -22,11 +22,11 @@ const CounterScreen = () => {
     <View>
       <Button
         title="Increase"
-        onPress={() => dispatch({ type: "increase", payload: 1 })}
+        onPress={() => dispatch({ type: "increment", payload: 1 })}
       />
       <Button
         title="Decrease"
-        onPress={() => dispatch({ type: "decrease", payload: -1 })}
+        onPress={() => dispatch({ type: "decrement", payload: 1 })}
       />
       <Text>Current Count:{state.count}</Text>
     </View>
