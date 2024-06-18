@@ -15,11 +15,13 @@ const styles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: "black",
-     alignItems:'center'
+    height: 200,
+    flexDirection: "row",
+    justifyContent: "flex-start",
   },
   textStyle: {
     borderWidth: 3,
-    borderColor: "red"
+    borderColor: "red",
   },
 });
 
